@@ -7,5 +7,15 @@
 </head>
 <body>
   <h1>Skills</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+        <a href="/skills<%= skill._id%>"><%= skill.text %></a>
+        -   
+        <%= skill.level ? 'beginner' : 'intermediate' : 'advanced' : ' ' %>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="skills/new">Add a Skill</a>
 </body>
 </html>
